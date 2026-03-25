@@ -1,5 +1,7 @@
 # NL-to-SQL Brokerage Query Agent
 
+[Live Demo](https://nl-to-sql-brokerage-query-agent.vercel.app/)
+
 An AI-powered natural language interface for querying brokerage data. Ask questions in plain English — the agent generates SQL using Google Gemini 2.5 Flash, runs it against a local SQLite database, and returns results with a natural-language summary.
 
 Built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and **SQLite**.
