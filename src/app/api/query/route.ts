@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const { query } = await req.json();
 
     if (!query) {
-      return NextResponse.json({ error: 'Query is required' }, { status: 400 });
+      return NextResponse.json({ status: 'error', error: 'Query is required' }, { status: 400 });
     }
 
     // 1. Guardrails Check
@@ -112,6 +112,6 @@ ${JSON.stringify(maxSummaryRows, null, 2)}
 
   } catch (error) {
     console.error('API Error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ status: 'error', error: 'Internal server error' }, { status: 500 });
   }
 }
