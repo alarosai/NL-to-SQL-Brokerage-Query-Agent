@@ -65,7 +65,7 @@ export default function Home() {
           Brokerage Query <span className="text-gradient">Agent</span>
         </h1>
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-          Ask complex questions about accounts, orders, prices, and positions in plain English. Powered by Google Gemini and local SQLite data.
+          Instantly answer complex questions about your clients' accounts, trade orders, pricing, and portfolios by simply asking in plain English.
         </p>
 
         <div className="flex justify-center flex-row">
