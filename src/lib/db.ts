@@ -6,6 +6,9 @@ let db: Database.Database;
 export function getDb() {
   if (!db) {
     const dbPath = path.join(process.cwd(), 'data', 'brokerage.db');
+    if (!require('fs').existsSync(dbPath)) {
+      throw new Error(`Database file not found at ${dbPath}. Files at process.cwd(): ${require('fs').readdirSync(process.cwd()).join(', ')}`);
+    }
     db = new Database(dbPath, { readonly: true, fileMustExist: true });
     // Define a busy timeout just in case
     db.pragma('busy_timeout = 3000');

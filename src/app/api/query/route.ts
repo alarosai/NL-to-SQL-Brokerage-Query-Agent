@@ -112,6 +112,9 @@ ${JSON.stringify(maxSummaryRows, null, 2)}
 
   } catch (error) {
     console.error('API Error:', error);
-    return NextResponse.json({ status: 'error', error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ 
+        status: 'error', 
+        error: error instanceof Error ? error.message : String(error) 
+    }, { status: 500 });
   }
 }
